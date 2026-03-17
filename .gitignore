@@ -1,0 +1,7 @@
+# Ignore frontend artifacts
+bookmarked-frontend/node_modules/
+bookmarked-frontend/dist/ 
+bookmarked-frontend/.env*
+
+
+# Ignore backend artifacts
