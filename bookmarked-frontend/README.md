@@ -1,12 +1,13 @@
-# bookmarked-frontend
-## Setting up project locally
+# Bookmarked-frontend
+
+# Setting up the project locally
 1. Make sure node.js is installed         - https://nodejs.org/en/download
 2. Change into the frontend directory     - `cd bookmarked-frontend`
 3. Download project dependencies          - `npm i`
 4. Start development server               - `npm run dev`
 5. View the project running on port 5173  - `http://localhost:5173`
 
-## Todo
+# Todo
 Add pages for each boundary class extracted from the [analysis document](https://docs.google.com/document/d/142nzC9YF9G2kjyOhJ2z9PXtlsjHaZIlJIsM1bei7F_Q/edit?tab=t.0), and control classes/methods that should be included on the frontend
 
 
