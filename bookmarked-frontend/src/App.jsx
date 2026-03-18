@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './index.css'
 
+// Import router for pages
+import { HashRouter as Router, Routes, Route} from "react-router-dom"
+
+
 function App() {
   const [count, setCount] = useState(0)
 
