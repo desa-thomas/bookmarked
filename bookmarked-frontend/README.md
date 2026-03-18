@@ -10,8 +10,6 @@
 # Todo
 Add pages for each boundary class extracted from the [analysis document](https://docs.google.com/document/d/142nzC9YF9G2kjyOhJ2z9PXtlsjHaZIlJIsM1bei7F_Q/edit?tab=t.0), and control classes/methods that should be included on the frontend
 
-
-
 - [ ] HomePage
     - [ ] NavBar
 
