@@ -5,3 +5,5 @@ bookmarked-frontend/.env*
 
 
 # Ignore backend artifacts
+**/__pycache__/
+**/*.egg-info/
