@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bookmarked-backend"
+version = "0.1.0"
+description = "Backend for Bookmarked web application"
+authors = [
+    { name="Thomas De Sa", email="desa2thomas@gmail.com" },
+    #add your name and email if you want
+]
+requires-python = ">=3.10"
+dependencies = [
+    # include packages here when you add them
+    # e.g., "flask>=2.3.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["entities", "controllers"]
