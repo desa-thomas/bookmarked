@@ -26,4 +26,4 @@
     | - TestEntity.py 
 ```
 
-Modules from `controller/` and `entities/` are importable from `backend/api.py` using : `import className from controllers.fileName`
+Modules from `controller/` and `entities/` are importable from `backend/api.py` using : `import className from controllers.fileName`. There is an example currently in `api.py`. 
