@@ -37,6 +37,6 @@ function SearchBar(){
   return(
     <input 
       placeholder='Search'
-      className='bg-white'/>
+      className='bg-white rounded-xl pl-3'/>
   )
 }
