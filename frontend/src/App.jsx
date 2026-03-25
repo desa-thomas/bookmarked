@@ -5,7 +5,9 @@ import './index.css'
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
 // Import Pages 
-
+import HomePage from './pages/HomePage'
+import BookshelfPage from './pages/BookshelfPage'
+import CommunityPage from './pages/CommunityPage'
 // Import Components
 
 
@@ -15,13 +17,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='font-sans bg-bgprimary'>
+    <div className='font-sans'>
       <NavBar/>
-      <div
-        className='flex w-screen h-screen items-center justify-center'>
-        Placeholder
-      </div>
-
+      
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/bookshelf" element = {<BookshelfPage/>}/>
+          <Route path="/community" element = {<CommunityPage/>}/>
+        </Routes>
+      </Router>
     </div>)
 
 }

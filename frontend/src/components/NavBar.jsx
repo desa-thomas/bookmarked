@@ -7,14 +7,14 @@ export default function NavBar() {
     <div
       className="flex flex-row w-screen items-center justify-between border-2 border-black border-md p-4 mb-1">
 
-      <div className="justify-self-start text-2xl hover:underline">
-        Bookmarked
+      <div className="justify-self-start text-2xl ">
+        <a className="hover:underline" href = '#/'>Bookmarked</a>
       </div>
 
       <div className="justify-self-end flex flex-row gap-5 items-center">
-        <p className="hover:underline">My Books</p>
-        <p className="hover:underline">Community</p> 
-        <p className="hover:underline">Lists</p>
+        <a href="#/bookshelf" className="hover:underline">Bookshelf</a>
+        <a href="#/community" className="hover:underline">Community</a> 
+        <a href="#/lists" className="hover:underline">Lists</a>
         <SearchBar/>
         <LoginButton/>
       </div>
