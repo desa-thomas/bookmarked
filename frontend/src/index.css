@@ -2,5 +2,18 @@
 
 @theme
 {
+    --color-bgprimary: #DCD6D0 ;
+    --color-bgsecondary: #685D50; 
+
+    --color-primaryfont: #1c1c1c;
+    --color-secondaryfont: black; 
+
+    --color-borderprimary: #323030; 
+
+    --color-primary: #966B9D;
+    --color-accent: #966B9D;
+    --color-secondary: #228CDB; 
+
 }
+
 

@@ -7,15 +7,16 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"
 // Import Pages 
 
 // Import Components
+
+
 import NavBar from './components/NavBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='font-sans'>
-      <NavBar />
-
+    <div className='font-sans bg-bgprimary'>
+      <NavBar/>
       <div
         className='flex w-screen h-screen items-center justify-center'>
         Placeholder
