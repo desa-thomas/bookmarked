@@ -12,7 +12,7 @@ export default function NavBar() {
         <IoBookmark/>
       </div>
 
-      <div className="justify-self-end flex flex-row gap-5 items-center">
+      <div className="justify-self-end flex flex-row gap-5 items-center font-semibold">
         <a href="#/bookshelf" className="hover:underline">Bookshelf</a>
         <a href="#/community" className="hover:underline">Community</a> 
         <a href="#/lists" className="hover:underline">Lists</a>
