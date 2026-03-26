@@ -17,13 +17,6 @@ function LoggedInHomepage() {
 }
 
 function DefaultHomepage() {
- 
-  const exampleBookList = []; 
-  for (let i = 0; i < 5; i++){
-    exampleBookList.push(
-      <BookCoverCard key={i}/>
-    )
-  }
 
   return (
     <div className="border flex-1 flex flex-col items-center gap-5 pt-5">
@@ -35,9 +28,9 @@ function DefaultHomepage() {
       </div>
       <SignupButton />
 
-      {/** BOOK CARDS  **/}
-      <div className="flex gap-5">
-        {exampleBookList} 
+      <div>
+        <h1 className="text-3xl font-semibold tracking-tighter"> POPULAR BOOKS </h1>
+        <PopularBooks />
       </div>
     </div>
   )
@@ -48,4 +41,22 @@ function SignupButton() {
     <button className=" p-3 border-green-700 border-1 font-medium rounded-md bg-green-500 hover:opacity-80 hover:bg-green-600">
       Begin Your Reading Journey </button>
   )
+}
+
+function PopularBooks() {
+
+  // EXAMPLE BOOKS REPLACE WITH BOOKS FROM DB
+  const publicPath = "/book_covers_examples"
+  const exampleBookPaths = ["1984.jpg", "blood_meridian.jpg", "clockwork.jpg", "LOTR.jpg", "metamorphosis.jpg"]
+  const exampleBookList = [];
+  for (let i = 0; i < exampleBookPaths.length; i++) {
+    const src = `${publicPath}/${exampleBookPaths[i]}`
+    exampleBookList.push(
+      <BookCoverCard key={i} src={src} alt={exampleBookPaths[i]} />
+    )
+  }
+  return (
+    <div className="flex gap-5">
+      {exampleBookList}
+    </div>)
 }
