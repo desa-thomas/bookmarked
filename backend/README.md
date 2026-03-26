@@ -27,3 +27,6 @@
 ```
 
 Modules from `controller/` and `entities/` are importable from `backend/api.py` using : `import className from controllers.fileName`. There is an example currently in `api.py`. 
+
+## Open Library Resources
+- [Book cover API](https://openlibrary.org/dev/docs/api/covers)

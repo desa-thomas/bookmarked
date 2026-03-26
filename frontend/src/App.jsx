@@ -17,7 +17,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='font-sans'>
+    <div className='font-open-sans flex flex-col w-screen h-screen bg-bgprimary'>
       <NavBar/>
       
       <Router>
