@@ -5,7 +5,7 @@ export default function NavBar() {
 
   return (
     <div
-      className="flex flex-row w-screen items-center justify-between border-2 border-black border-md p-4 mb-1">
+      className="flex flex-row w-screen items-center justify-between border-2 border-black border-md p-4">
 
       <div className="justify-self-start text-2xl flex flex-row items-center gap-1">
         <a className="hover:underline" href = '#/'>Bookmarked</a>
