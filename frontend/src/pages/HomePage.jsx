@@ -19,17 +19,17 @@ function LoggedInHomepage() {
 function DefaultHomepage() {
 
   return (
-    <div className="border flex-1 flex flex-col items-center gap-5 pt-5">
+    <div className="border flex-1 flex flex-col items-center gap-10 justify-center">
       {/** SIGNUP **/}
       <div className="text-4xl font-medium font-playfair items-center flex flex-col justify-self-center">
         <p>Track books you've read.</p>
         <p>Save those you want to read.</p>
         <p>Tell your friends what's good.</p>
       </div>
-      <SignupButton />
+      <SignupButton/>
 
-      <div>
-        <h1 className="text-3xl font-semibold tracking-tighter"> POPULAR BOOKS </h1>
+      <div className="pt-5">
+    {/**<h1 className="text-3xl font-semibold tracking-tighter"> POPULAR BOOKS </h1> **/}
         <PopularBooks />
       </div>
     </div>
