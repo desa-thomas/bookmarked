@@ -21,7 +21,7 @@ export default function RegisterPopup({ closeFunction }) {
 
         <div className="flex items-center justify-between text-gray-100 font-light tracking-wide">
           <h1>JOIN BOOKMARKED</h1>
-          <HiXMark className="hover:fill-white w-6 h-auto" onClick={closeFunction} />
+          <HiXMark className="hover:fill-white w-6 h-auto cursor-pointer" onClick={closeFunction} />
         </div>
 
         <div className="flex flex-col gap-3">
