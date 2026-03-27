@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 import BookCoverCard from "../components/BookCoverCard"
+import RegisterPopup from "./RegisterPopup";
 
 export default function HomePage({ loggedIn }) {
   /**
@@ -17,6 +20,10 @@ function LoggedInHomepage() {
 }
 
 function DefaultHomepage() {
+  // State for registration pop up dialog/form 
+  const [registerPopup, setRegisterPopup] = useState(false);
+  const openRegisterPopup = () => setRegisterPopup(true); 
+  const closeRegisterPopup = () => setRegisterPopup(false); 
 
   return (
     <div className="border flex-1 flex flex-col items-center gap-10 justify-center">
@@ -26,19 +33,21 @@ function DefaultHomepage() {
         <p>Save those you want to read.</p>
         <p>Tell your friends what's good.</p>
       </div>
-      <SignupButton/>
+      <SignupButton onclick={openRegisterPopup}/>
 
       <div className="pt-5">
-    {/**<h1 className="text-3xl font-semibold tracking-tighter"> POPULAR BOOKS </h1> **/}
+        {/**<h1 className="text-3xl font-semibold tracking-tighter"> POPULAR BOOKS </h1> **/}
         <PopularBooks />
       </div>
+
+       {registerPopup && (<RegisterPopup closeFunction={closeRegisterPopup}/>)}
     </div>
   )
 }
 
-function SignupButton() {
+function SignupButton( {onclick} ) {
   return (
-    <button className=" p-3 border-green-700 border-1 font-medium rounded-md bg-green-500 hover:opacity-80 hover:bg-green-600">
+    <button onClick={onclick} className=" p-3 border-green-700 border-1 font-medium rounded-md bg-green-500 hover:opacity-80 hover:bg-green-600">
       Begin Your Reading Journey </button>
   )
 }
