@@ -28,7 +28,7 @@ function DefaultHomepage() {
   return (
     <div className="border flex-1 flex flex-col items-center gap-10 justify-center">
       {/** SIGNUP **/}
-      <div className="text-4xl font-medium font-playfair items-center flex flex-col justify-self-center">
+      <div className="text-4xl font-medium font-playfair items-center flex flex-col justify-self-center pt-5">
         <p>Track books you've read.</p>
         <p>Save those you want to read.</p>
         <p>Tell your friends what's good.</p>
