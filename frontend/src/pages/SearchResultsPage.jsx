@@ -112,7 +112,7 @@ function SearchResult({ title, author, publicationYear, genres, children }) {
             </p>
           </div>
 
-          <p className="font-light">" Short synopsis of the book"   </p>
+          <p className="font-light break-all">" Short synopsis of the book"   </p>
         </div>
 
         {/* EMPTY CELL UNDER BOOK COVER*/}
