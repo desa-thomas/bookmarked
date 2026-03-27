@@ -13,7 +13,8 @@ export default function BookCoverCard({ src, alt, size }) {
   else widthClass = "w-20";
 
   return (
-    <div className={`border rounded-md ${widthClass} overflow-hidden`}>
+    <div className={`border rounded-md ${widthClass} overflow-hidden  
+                     hover:outline-green-400 hover:outline-3`}>
       <img src={src} alt={alt} className="w-full h-auto">
       </img>
     </div>

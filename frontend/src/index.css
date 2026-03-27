@@ -7,13 +7,13 @@
     --color-bgsecondary: #EEEAE8;
     --color-altfont: #2F2923; 
 
-    --color-primaryfont: #1c1c1c;
-    --color-secondaryfont: black; 
+    --color-hover: #F02D65;
 
     --color-borderprimary: #323030; 
 
     --color-primary: #966B9D;
-    --color-accent: #966B9D;
+
+
     --color-secondary: #228CDB; 
     --font-playfair: "Playfair Display", sans-serif;
     --font-open-sans: "Open Sans", sans-serif;
