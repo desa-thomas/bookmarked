@@ -47,7 +47,9 @@ function DefaultHomepage() {
 
 function SignupButton( {onclick} ) {
   return (
-    <button onClick={onclick} className=" p-3 border-green-700 border-1 font-medium rounded-md bg-green-500 hover:opacity-80 hover:bg-green-600">
+    <button onClick={onclick} 
+    className="p-3 border-green-700 border-1 rounded-md
+    font-medium  bg-green-500 hover:bg-green-600">
       Begin Your Reading Journey </button>
   )
 }

@@ -27,7 +27,8 @@ function LoginButton(){
 
   return (
     <button
-      className="border border-black px-4 py-1 hover:bg-blue-500">
+      className="border border-green-700 rounded-sm bg-green-500
+        px-4 py-1 hover:bg-green-600">
       Login
     </button>
   )
