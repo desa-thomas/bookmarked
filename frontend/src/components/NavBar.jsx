@@ -8,7 +8,7 @@ export default function NavBar() {
       className="flex flex-row w-screen items-center justify-between border-2 border-black border-md p-4">
 
       <div className="justify-self-start text-3xl font-bold tracking-tighter flex flex-row items-center gap-1">
-        <a className="hover:underline" href = '#/'>Bookmarked</a>
+        <a className="" href = '#/'>Bookmarked</a>
         <IoBookmark/>
       </div>
 
