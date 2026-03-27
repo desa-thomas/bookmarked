@@ -22,7 +22,7 @@ function App() {
     <div className='font-open-sans flex flex-col w-screen h-screen bg-bgprimary'>
 
       <Router>
-        <NavBar />
+        <NavBar  />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/search" element={<SearchResultsPage />} />

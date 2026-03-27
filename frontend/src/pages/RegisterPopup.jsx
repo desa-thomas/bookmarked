@@ -19,7 +19,8 @@ export default function RegisterPopup({ closeFunction }) {
       transition-all duration-600
       ${mounted ? "scale-100 opacity-100" : "scale-80 opacity-0"}`}>
 
-        <div className="flex items-center justify-between text-gray-100 font-light tracking-wide">
+        <div className="flex items-center justify-between 
+          text-gray-100 font-light tracking-wide">
           <h1>JOIN BOOKMARKED</h1>
           <HiXMark className="hover:fill-white w-6 h-auto cursor-pointer" onClick={closeFunction} />
         </div>

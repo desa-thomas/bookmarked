@@ -4,7 +4,8 @@
 @theme
 {
     --color-bgprimary: #DCD6D0 ;
-    --color-bgsecondary: #685D50; 
+    --color-bgsecondary: #EEEAE8;
+    --color-altfont: #2F2923; 
 
     --color-primaryfont: #1c1c1c;
     --color-secondaryfont: black; 

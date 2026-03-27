@@ -26,7 +26,7 @@ function DefaultHomepage() {
   const closeRegisterPopup = () => setRegisterPopup(false); 
 
   return (
-    <div className="border flex-1 flex flex-col items-center gap-10 justify-center">
+    <div className="flex-1 flex flex-col items-center gap-10 justify-center">
       {/** SIGNUP **/}
       <div className="text-4xl font-medium font-playfair items-center flex flex-col justify-self-center pt-5">
         <p>Track books you've read.</p>
@@ -64,7 +64,7 @@ function PopularBooks() {
   for (let i = 0; i < exampleBookPaths.length; i++) {
     const src = `${publicPath}/${exampleBookPaths[i]}`
     exampleBookList.push(
-      <BookCoverCard key={i} src={src} alt={exampleBookPaths[i]} />
+      <BookCoverCard key={i} src={src} alt={exampleBookPaths[i]} size={"LARGE"}/>
     )
   }
   return (

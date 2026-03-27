@@ -11,10 +11,11 @@ export default function NavBar() {
   return (
     <div
       className="flex flex-row items-center justify-between
-                w-screen border-2 border-black border-md p-4">
+                w-screen border-b-1 border-gray-200 border-md p-4
+                bg-bgsecondary text-altfont">
 
       <div className="justify-self-start flex flex-row items-center gap-1
-                      text-3xl font-bold tracking-tighter">
+                     text-3xl font-bold tracking-tighter">
         <a className="" href='#/'>Bookmarked</a>
         <IoBookmark />
       </div>
