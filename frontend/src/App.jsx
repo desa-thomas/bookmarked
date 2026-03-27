@@ -19,7 +19,7 @@ function App() {
 
   return (
 
-    <div className='font-open-sans flex flex-col w-screen h-screen bg-bgprimary'>
+    <div className='flex font-open-sans flex flex-col min-w-screen min-h-screen bg-bgprimary'>
 
       <Router>
         <NavBar  />
