@@ -8,6 +8,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import HomePage from './pages/HomePage'
 import BookshelfPage from './pages/BookshelfPage'
 import CommunityPage from './pages/CommunityPage'
+import SearchResultsPage from './pages/SearchResultsPage'
 // Import Components
 
 
@@ -17,14 +18,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+
     <div className='font-open-sans flex flex-col w-screen h-screen bg-bgprimary'>
-      <NavBar/>
-      
+
       <Router>
+        <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/bookshelf" element = {<BookshelfPage/>}/>
-          <Route path="/community" element = {<CommunityPage/>}/>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
+          <Route path="/bookshelf" element={<BookshelfPage />} />
+          <Route path="/community" element={<CommunityPage />} />
         </Routes>
       </Router>
     </div>)
