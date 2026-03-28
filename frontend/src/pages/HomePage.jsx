@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import BookCoverCard from "../components/BookCoverCard"
-import RegisterPopup from "./RegisterPopup";
+import RegistrationForm from "./RegistrationForm";
 
 export default function HomePage({ loggedIn }) {
   /**
@@ -40,7 +40,7 @@ function DefaultHomepage() {
         <PopularBooks />
       </div>
 
-       {registerPopup && (<RegisterPopup closeFunction={closeRegisterPopup}/>)}
+       {registerPopup && (<RegistrationForm closeFunction={closeRegisterPopup}/>)}
     </div>
   )
 }

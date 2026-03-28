@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 
 import { HiXMark } from "react-icons/hi2";
 
-export default function RegisterPopup({ closeFunction }) {
-  
+export default function RegistrationForm({ closeFunction }) {
+
   const [mounted, setMounted] = useState(false);
 
   // render popup with initial opacity and scale set to 0 
   // upon render set mounted state to true
-  useEffect(()=>{
-    setMounted(true); 
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   return (
