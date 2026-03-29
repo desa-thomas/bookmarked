@@ -64,7 +64,7 @@ function PopularBooks() {
   for (let i = 0; i < exampleBooks.length; i++) {
     const src = exampleBooks[i].img_path
     exampleBookList.push(
-      <BookCoverCard key={i} src={src} alt={src} size={"M"} hover={true}/>
+      <BookCoverCard key={i} src={src} alt={src} size={"M"} onclick={true} id={exampleBooks[i].id}/>
     )
   }
   return (

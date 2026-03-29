@@ -1,18 +1,18 @@
 //FOR URL PARAMETERS
 import { useSearchParams } from "react-router-dom"
 
-//Navigate TO BOOK PAGE
+import BookCoverCard from "../components/BookCoverCard";
 import { useNavigate } from "react-router-dom";
 
-import BookCoverCard from "../components/BookCoverCard";
-
 //EXAMPLE BOOK INFORMATION
-import exampleBooks from "../exampleBooks.json" 
+import exampleBooks from "../exampleBooks.json"
 
 export default function BookSearchResultsPage() {
 
+  //get search parameters
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query")
+
 
   //EXAMPLE SEARCH RESULTS, REPLACE WITH API RESULTS 
   const exampleBookList = [];
@@ -26,8 +26,9 @@ export default function BookSearchResultsPage() {
           src={src}
           alt={exampleBooks[i].img_path}
           size={"SMALL"}
-          hover={true}
-      />
+          onclick={true}
+          id={exampleBooks[i].id}
+        />
       </BookSearchResult>);
   }
   //---------------------------------------------
@@ -61,6 +62,9 @@ function BookSearchResult({ book, children }) {
     <BookSearchResult/>
 
   */
+  const navigate = useNavigate()
+  const toBookPage = ()=> {navigate(`/book?id=${book.id}`)}
+
   return (
     <div>
       <div className="grid grid-cols-[min-content_auto] "  >
@@ -75,8 +79,8 @@ function BookSearchResult({ book, children }) {
         <div className="pl-5">
           {/*TITLE - YEAR */}
           <div className="self-start flex items-end gap-2">
-            <p 
-                className="font-bold font-playfair text-2xl tracking-tight
+            <p onClick={toBookPage}
+              className="font-bold font-playfair text-2xl tracking-tight
                           hover:text-green-600 cursor-pointer">
               {book?.title}
             </p>
@@ -105,7 +109,7 @@ function BookSearchResult({ book, children }) {
         </div>
       </div>
 
-    <hr className="mt-5 opacity-30" />
+      <hr className="mt-5 opacity-30" />
 
     </div>
   )

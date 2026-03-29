@@ -7,7 +7,7 @@ export default function BookPage( { }){
   const [ searchParams ] = useSearchParams(); 
   const bookId = searchParams.get("id")
 
-  const book = exampleBooks.find(book => book.id = bookId)
+  const book = exampleBooks.find(book => book.id == bookId)
 
   return (
     <div className="flex">

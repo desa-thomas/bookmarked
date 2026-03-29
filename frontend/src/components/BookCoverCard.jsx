@@ -4,14 +4,19 @@ const SIZE = {
   SMALL: "S"
 }
 
-export default function BookCoverCard({ src, alt, size, onClick, hover}) {
-/*
-    * src - img src
-    * alt - img alt
-    * size - S, M, L 
-    * onClick - function 
-    * hover - boolean 
-*/
+import { useNavigate } from "react-router-dom";
+
+export default function BookCoverCard({ src, alt, size, onclick, id }) {
+  /*
+      * src - img src
+      * alt - img alt
+      * size - S, M, L 
+      * onclick - boolean (clicking cover card will route to the book page)
+      * id - book id for routing
+  */
+
+  const navigate = useNavigate();
+  const toBookPage = (id) => { navigate(`/book?id=${id}`) }
 
   let widthClass = "w-20"
 
@@ -21,8 +26,8 @@ export default function BookCoverCard({ src, alt, size, onClick, hover}) {
 
   return (
     <div className={`border rounded-md ${widthClass} overflow-hidden  
-                     ${hover ? "hover:outline-green-400 hover:outline-3" : ""}`}
-      onClick={onClick}>
+                     ${onclick ? "hover:outline-green-400 hover:outline-3" : ""}`}
+      onClick={onclick ? () => { toBookPage(id) } : () => { }}>
       <img src={src} alt={alt} className="w-full h-auto">
       </img>
     </div>
