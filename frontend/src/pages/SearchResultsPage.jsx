@@ -1,42 +1,10 @@
 //FOR URL PARAMETERS
 import { useSearchParams } from "react-router-dom"
 
-//EXAMPLE 
 import BookCoverCard from "../components/BookCoverCard";
 
 //EXAMPLE BOOK INFORMATION
-const exampleBookInfo = [
-  {
-    "title": "Nineteen Eighty-Four",
-    "author": "George Orwell",
-    "publicationYear": "1949",
-    "genres": ["Dystopian", "Political Fiction"]
-  },
-  {
-    "title": "Blood Meridian",
-    "author": "Cormac McCarthy",
-    "publicationYear": "1985",
-    "genres": ["Anti-Western", "Gothic Western", "Historical Fiction"]
-  },
-  {
-    "title": "A Clockwork Orange",
-    "author": "Anthony Burgess",
-    "publicationYear": "1962",
-    "genres": ["Science Fiction", "Dystopian Fiction", "Satire", "Black Comedy"]
-  },
-  {
-    "title": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien",
-    "publicationYear": "1954",
-    "genres": ["High Fantasy", "Adventure", "Epic"]
-  },
-  {
-    "title": "The Metamorphosis",
-    "author": "Franz Kafka",
-    "publicationYear": "1915",
-    "genres": ["Existentialist Fiction", "Absurdist Fiction", "Short Story"]
-  }
-]
+import exampleBooks from "../exampleBooks.json" 
 
 export default function BookSearchResultsPage() {
 
@@ -44,17 +12,16 @@ export default function BookSearchResultsPage() {
   const query = searchParams.get("query")
 
   //EXAMPLE SEARCH RESULTS, REPLACE WITH API RESULTS 
-  const path = "/book_covers_examples"
-  const exampleBookPaths = ["1984.jpg", "blood_meridian.jpg", "clockwork.jpg", "LOTR.jpg", "metamorphosis.jpg"]
   const exampleBookList = [];
-  for (let i = 0; i < exampleBookPaths.length; i++) {
-    const src = `${path}/${exampleBookPaths[i]}`
+
+  for (let i = 0; i < exampleBooks.length; i++) {
+    const src = `/book_covers_examples/${exampleBooks[i].img_path}`
     exampleBookList.push(
-      <BookSearchResult key={i} book={exampleBookInfo[i]}>
+      <BookSearchResult key={i} book={exampleBooks[i]}>
 
         <BookCoverCard
           src={src}
-          alt={exampleBookPaths[i]}
+          alt={exampleBooks[i].img_path}
           size={"SMALL"} />
       </BookSearchResult>);
   }
