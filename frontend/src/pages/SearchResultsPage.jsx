@@ -38,7 +38,7 @@ const exampleBookInfo = [
   }
 ]
 
-export default function SearchResultsPage() {
+export default function BookSearchResultsPage() {
 
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query")
@@ -50,7 +50,7 @@ export default function SearchResultsPage() {
   for (let i = 0; i < exampleBookPaths.length; i++) {
     const src = `${path}/${exampleBookPaths[i]}`
     exampleBookList.push(
-      <SearchResult key={i}
+      <BookSearchResult key={i}
         title={exampleBookInfo[i].title}
         author={exampleBookInfo[i].author}
         publicationYear={exampleBookInfo[i].publicationYear}
@@ -60,7 +60,7 @@ export default function SearchResultsPage() {
           src={src}
           alt={exampleBookPaths[i]}
           size={"SMALL"} />
-      </SearchResult>);
+      </BookSearchResult>);
   }
   //---------------------------------------------
 
@@ -80,13 +80,13 @@ export default function SearchResultsPage() {
   )
 }
 
-function SearchResult({ title, author, publicationYear, genres, children }) {
+function BookSearchResult({ title, author, publicationYear, genres, children }) {
   /**
   Pass a book cover as the children 
   
-    <SearchResult title= ... author= ... publicaitonDate=... genres =...>
+    <BookSearchResult title= ... author= ... publicaitonDate=... genres =...>
       <BookCoverCard parameters=.../>
-    <SearchResult/>
+    <BookSearchResult/>
   */
   return (
     <div>
