@@ -6,7 +6,7 @@
     "author": "George Orwell",
     "publicationYear": "1949",
     "genres": ["Dystopian", "Political Fiction"],
-    "img_path": "1984.jpg" 
+    "img_path": "book_covers_examples/1984.jpg" 
   },
   {
     "id": 2,
@@ -14,7 +14,7 @@
     "author": "Cormac McCarthy",
     "publicationYear": "1985",
     "genres": ["Anti-Western", "Gothic Western", "Historical Fiction"],
-    "img_path": "blood_meridian.jpg"
+    "img_path": "book_covers_examples/blood_meridian.jpg"
   },
   {
     "id": 3,
@@ -22,7 +22,7 @@
     "author": "Anthony Burgess",
     "publicationYear": "1962",
     "genres": ["Science Fiction", "Dystopian Fiction", "Satire", "Black Comedy"], 
-    "img_path": "clockwork.jpg"
+    "img_path": "book_covers_examples/clockwork.jpg"
   },
   {
     "id": 4, 
@@ -30,7 +30,7 @@
     "author": "J.R.R. Tolkien",
     "publicationYear": "1954",
     "genres": ["High Fantasy", "Adventure", "Epic"],
-    "img_path": "LOTR.jpg"
+    "img_path": "book_covers_examples/LOTR.jpg"
   },
   {
     "id": 5, 
@@ -38,7 +38,7 @@
     "author": "Franz Kafka",
     "publicationYear": "1915",
     "genres": ["Existentialist Fiction", "Absurdist Fiction", "Short Story"], 
-    "img_path" : "metamorphosis.jpg"
+    "img_path" : "book_covers_examples/metamorphosis.jpg"
   }
 ]
 

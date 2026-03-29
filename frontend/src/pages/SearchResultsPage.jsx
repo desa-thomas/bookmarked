@@ -1,6 +1,9 @@
 //FOR URL PARAMETERS
 import { useSearchParams } from "react-router-dom"
 
+//Navigate TO BOOK PAGE
+import { useNavigate } from "react-router-dom";
+
 import BookCoverCard from "../components/BookCoverCard";
 
 //EXAMPLE BOOK INFORMATION
@@ -15,14 +18,16 @@ export default function BookSearchResultsPage() {
   const exampleBookList = [];
 
   for (let i = 0; i < exampleBooks.length; i++) {
-    const src = `/book_covers_examples/${exampleBooks[i].img_path}`
+    const src = `${exampleBooks[i].img_path}`
     exampleBookList.push(
       <BookSearchResult key={i} book={exampleBooks[i]}>
 
         <BookCoverCard
           src={src}
           alt={exampleBooks[i].img_path}
-          size={"SMALL"} />
+          size={"SMALL"}
+          hover={true}
+      />
       </BookSearchResult>);
   }
   //---------------------------------------------

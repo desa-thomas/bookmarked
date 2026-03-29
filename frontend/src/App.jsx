@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage'
 import BookshelfPage from './pages/BookshelfPage'
 import CommunityPage from './pages/CommunityPage'
 import SearchResultsPage from './pages/SearchResultsPage'
+import BookPage from './pages/BookPage'
 // Import Components
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/bookshelf" element={<BookshelfPage />} />
           <Route path="/community" element={<CommunityPage />} />
+          <Route path="/book" element={<BookPage/>} /> 
         </Routes>
       </Router>
     </div>)

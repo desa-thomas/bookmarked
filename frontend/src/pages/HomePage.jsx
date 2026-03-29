@@ -3,6 +3,8 @@ import { useState } from "react";
 import BookCoverCard from "../components/BookCoverCard"
 import RegistrationForm from "./RegistrationForm";
 
+import exampleBooks from "../exampleBooks.json"
+
 export default function HomePage({ loggedIn }) {
   /**
   *    HomePage Boundary Class
@@ -58,13 +60,11 @@ function SignupButton( {onclick} ) {
 function PopularBooks() {
 
   // EXAMPLE BOOKS REPLACE WITH BOOKS FROM DB
-  const publicPath = "/book_covers_examples"
-  const exampleBookPaths = ["1984.jpg", "blood_meridian.jpg", "clockwork.jpg", "LOTR.jpg", "metamorphosis.jpg"]
   const exampleBookList = [];
-  for (let i = 0; i < exampleBookPaths.length; i++) {
-    const src = `${publicPath}/${exampleBookPaths[i]}`
+  for (let i = 0; i < exampleBooks.length; i++) {
+    const src = exampleBooks[i].img_path
     exampleBookList.push(
-      <BookCoverCard key={i} src={src} alt={exampleBookPaths[i]} size={"LARGE"}/>
+      <BookCoverCard key={i} src={src} alt={src} size={"M"} hover={true}/>
     )
   }
   return (
