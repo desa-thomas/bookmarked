@@ -50,11 +50,7 @@ export default function BookSearchResultsPage() {
   for (let i = 0; i < exampleBookPaths.length; i++) {
     const src = `${path}/${exampleBookPaths[i]}`
     exampleBookList.push(
-      <BookSearchResult key={i}
-        title={exampleBookInfo[i].title}
-        author={exampleBookInfo[i].author}
-        publicationYear={exampleBookInfo[i].publicationYear}
-        genres={exampleBookInfo[i].genres}>
+      <BookSearchResult key={i} book={exampleBookInfo[i]}>
 
         <BookCoverCard
           src={src}
@@ -80,13 +76,18 @@ export default function BookSearchResultsPage() {
   )
 }
 
-function BookSearchResult({ title, author, publicationYear, genres, children }) {
+function BookSearchResult({ book, children }) {
   /**
-  Pass a book cover as the children 
   
-    <BookSearchResult title= ... author= ... publicaitonDate=... genres =...>
+  Book search result card. Takes book object and a book cover (as the child)
+
+  Usage:  
+    <BookSearchResult book=book>
+
       <BookCoverCard parameters=.../>
+
     <BookSearchResult/>
+
   */
   return (
     <div>
@@ -105,10 +106,10 @@ function BookSearchResult({ title, author, publicationYear, genres, children }) 
             <p 
                 className="font-bold font-playfair text-2xl tracking-tight
                           hover:text-green-600 cursor-pointer">
-              {title}
+              {book?.title}
             </p>
             <p className="font-light tracking-wide text-xl">
-              {publicationYear}
+              {book?.publicationYear}
             </p>
           </div>
 
@@ -126,9 +127,9 @@ function BookSearchResult({ title, author, publicationYear, genres, children }) 
             <div className="px-1 border-fontalt border-1 bg-bgsecondary 
                rounded-sm opacity-60 hover:opacity-100 
                transition-all duration-100 cursor-pointer">
-              {`${author}`}
+              {`${book?.author}`}
             </div> </div>
-          <p> Genres: {genres.join(", ")} </p>
+          <p> Genres: {book?.genres.join(", ")} </p>
         </div>
       </div>
 
