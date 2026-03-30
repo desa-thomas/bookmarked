@@ -18,13 +18,14 @@ Add pages for each boundary class extracted from the [analysis document](https:/
 - [X] RegistrationForm (component within the page)
     - [ ] Input handling
 
-- [X] BookSearchPage
+- [X] BookSearchPage (ResultsDisplay)
+    - [X] BookCoverCard 
 
-- [ ] BookDetailPage
+- [X] BookPage
     - [ ] BookmarkButton
-    - [ ] BookmarkController
     - [ ] RatingWidget
-        - [ ] RatingController
+    - [ ] ReviewForm
+    - [ ] ReviewPage (Preview of reviews)
 
 - [ ] BookmarkedPage (ReadingListView)
     - [ ] BookShelfManager (? does this differ from bookmark controller)
@@ -59,11 +60,6 @@ Add pages for each boundary class extracted from the [analysis document](https:/
     - [ ] ResultsDisplay
     - [ ] BookSearchController
 
-
-- [ ] ReviewPage
-    - [ ] ReviewForm
-    - [ ] ReviewEditor
-    - [ ] ReviewController
     - [ ] CommentSection
         - [ ] Confirmation dialog
         - [ ] CommentModerationPanel (admin only)

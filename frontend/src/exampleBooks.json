@@ -6,7 +6,8 @@
     "author": "George Orwell",
     "publicationYear": "1949",
     "genres": ["Dystopian", "Political Fiction"],
-    "img_path": "book_covers_examples/1984.jpg" 
+    "img_path": "book_covers_examples/1984.jpg", 
+    "synopsis": "A masterpiece of rebellion and imprisonment where war is peace freedom is slavery and Big Brother is watching. Thought Police, Big Brother, Orwellian - these words have entered our vocabulary because of George Orwell's classic dystopian novel 1984. The story of one man's Nightmare Odyssey as he pursues a forbidden love affair through a world ruled by warring states and a power structure that controls not only information but also individual thought and memory 1984 is a prophetic haunting tale More relevant than ever before 1984 exposes the worst crimes imaginable the destruction of truth freedom and individuality."
   },
   {
     "id": 2,
@@ -14,7 +15,8 @@
     "author": "Cormac McCarthy",
     "publicationYear": "1985",
     "genres": ["Anti-Western", "Gothic Western", "Historical Fiction"],
-    "img_path": "book_covers_examples/blood_meridian.jpg"
+    "img_path": "book_covers_examples/blood_meridian.jpg", 
+    "synopsis": "Blood Meridian, chronicles the brutal world of the Texas-Mexico borderlands in the mid-nineteenth century. Its wounded hero, the teenage Kid, must confront the extraordinary violence of the Glanton gang, a murderous cadre on an official mission to scalp Indians and sell those scalps."
   },
   {
     "id": 3,
@@ -22,7 +24,8 @@
     "author": "Anthony Burgess",
     "publicationYear": "1962",
     "genres": ["Science Fiction", "Dystopian Fiction", "Satire", "Black Comedy"], 
-    "img_path": "book_covers_examples/clockwork.jpg"
+    "img_path": "book_covers_examples/clockwork.jpg",
+    "synopsis": "In Anthony Burgess's influential nightmare vision of the future, criminals take over after dark. Teen gang leader Alex narrates in fantastically inventive slang that echoes the violent intensity of youth rebelling against society. Dazzling and transgressive, A Clockwork Orange is a frightening fable about good and evil and the meaning of human freedom."
   },
   {
     "id": 4, 
@@ -30,7 +33,8 @@
     "author": "J.R.R. Tolkien",
     "publicationYear": "1954",
     "genres": ["High Fantasy", "Adventure", "Epic"],
-    "img_path": "book_covers_examples/LOTR.jpg"
+    "img_path": "book_covers_examples/LOTR.jpg",
+    "synopsis": "Sauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose." 
   },
   {
     "id": 5, 
@@ -38,7 +42,8 @@
     "author": "Franz Kafka",
     "publicationYear": "1915",
     "genres": ["Existentialist Fiction", "Absurdist Fiction", "Short Story"], 
-    "img_path" : "book_covers_examples/metamorphosis.jpg"
+    "img_path" : "book_covers_examples/metamorphosis.jpg", 
+    "synopsis": "With it's startling, bizarre, yet surprisingly funny first opening, Kafka begins his masterpiece, The Metamorphosis. It is the story of a young man who, transformed overnight into a giant beetle-like insect, becomes an object of disgrace to his family, an outsider in his own home, a quintessentially alienated man. A harrowing—though absurdly comic—meditation on human feelings of inadequacy, guilt, and isolation, The Metamorphosis has taken its place as one of the most widely read and influential works of twentieth-century fiction. As W.H. Auden wrote, \"Kafka is important to us because his predicament is the predicament of modern man.\""
   }
 ]
 

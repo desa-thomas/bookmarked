@@ -20,7 +20,7 @@ export default function BookCoverCard({ src, alt, size, onclick, id }) {
 
   let widthClass = "w-20"
 
-  if (size === SIZE.LARGE) widthClass = "w-60"
+  if (size === SIZE.LARGE) widthClass = "w-50"
   else if (size === SIZE.MEDIUM) widthClass = "w-40"
   else widthClass = "w-20";
 
