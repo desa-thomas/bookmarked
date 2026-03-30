@@ -80,7 +80,7 @@ function BookSearchResult({ book, children }) {
           {/*TITLE - YEAR */}
           <div className="self-start flex items-end gap-2">
             <p onClick={toBookPage}
-              className="font-bold font-playfair text-2xl tracking-tight
+              className="font-bold font-noto-serif text-2xl tracking-tight
                           hover:text-green-600 cursor-pointer">
               {book?.title}
             </p>
