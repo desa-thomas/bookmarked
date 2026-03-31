@@ -1,3 +1,5 @@
+# Coded By: Mateo Adebowale
+# Last Edit: 2026/03/29
 from datetime import date
 
 class Book: 
