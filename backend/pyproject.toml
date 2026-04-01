@@ -12,8 +12,7 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    # include packages here when you add them
-    # e.g., "flask>=2.3.0"
+    "flask>=2.3.0"
 ]
 
 [tool.setuptools.packages.find]
