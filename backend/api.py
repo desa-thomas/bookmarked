@@ -13,15 +13,17 @@ def add_cors_headers(response):
     response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization"
     response.headers["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS"
     return response
-books = [
-    Book(
-        title="Example Book",
-        id=1,
-        author="Jane Doe",
-        publicationDate=dt.fromisoformat("1999-06-09").date(),
-        genres=["fiction", "adventure"],
-        ISBN="978-0-123456-47-2",
-        coverImage=b""
+
+#Example data for testing purposes, made one for every entity class. 
+#In a real application, this would be replaced with database calls to fetch and store data.
+progress = [
+    ProgressTracker(
+        trackerId=1,
+        accountId=1,
+        goalId=1,
+        currentValue=150,
+        targetValue=300,
+        lastUpdated=dt.now().date()
     )
 ]
 
@@ -34,6 +36,56 @@ accounts = [
         profilePicture=b"",
         bio="Just a book lover.",
         creationDate=dt.fromisoformat("2020-01-15").date()
+    ),
+    Account(
+        username="jane_smith",
+        id=2,
+        email="jane.smith@example.com",
+        passwordHash=hash("password456"),
+        profilePicture=b"",
+        bio="A passionate reader.",
+        creationDate=dt.fromisoformat("2020-02-20").date()
+    ),
+    Account(
+        username="alice_jones",
+        id=3,
+        email="alice.jones@example.com",
+        passwordHash=hash("password789"),
+        profilePicture=b"",
+        bio="Loves mystery novels.",
+        creationDate=dt.fromisoformat("2020-03-10").date()
+    )
+
+]
+
+books = [
+    Book(
+        title="Example Book",
+        id=1,
+        author="Jane Doe",
+        publicationDate=dt.fromisoformat("1999-06-09").date(),
+        genres=["fiction", "adventure"],
+        ISBN="978-0-123456-47-2",
+        coverImage=b""
+    )
+]
+
+shelves = [
+    Bookshelf(
+        bookmarkedBooks=[books[0]],
+        accountId=accounts[0].id,
+        readingStatuses=[0,1,2],
+        readingGoal=10
+    )
+]
+r_list = [
+    ReadingList(
+        listName="My Reading List",
+        listId=1,
+        accountId=accounts[0].id,
+        books=[books[0]],
+        readingListTimestamp=dt.now().date(),
+        listVisibility=True
     )
 ]
 
@@ -46,6 +98,25 @@ forum = [
     )
 ]
 
+review = [
+    Review(
+        ratingId=1,
+        accountId=accounts[0].id,
+        ratingAmount=5,
+        reviewText="An amazing read! Highly recommend.",    
+        reviewTimestamp=dt.now().date()
+    )
+]
+
+f_list = [
+    FollowingList(
+        followerId=[accounts[0].id],
+        followedId=[1,2],
+        dateFollowed=[dt.now().date(), dt.now().date()]
+    )
+]
+
+#API Endpoints for testing purposes, demonstrating how to create new entities and retrieve their details.
 @app.route('/test', methods=['GET'])
 def test():
     test_controller = TestController()
@@ -92,4 +163,4 @@ def create_forum():
         forumTimestamp=dt.now().date()
     )
     forum.append(new_forum)
-    return jsonify(new_forum.getForumDetails()),201
+    return jsonify(new_forum.getForumDetails()), 201
