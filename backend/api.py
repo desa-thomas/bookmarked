@@ -98,30 +98,7 @@ forum = [
     )
 ]
 
-review = [
-    Review(
-        ratingId=1,
-        accountId=accounts[0].id,
-        ratingAmount=5,
-        reviewText="An amazing read! Highly recommend.",    
-        reviewTimestamp=dt.now().date()
-    )
-]
 
-f_list = [
-    FollowingList(
-        followerId=[accounts[0].id],
-        followedId=[1,2],
-        dateFollowed=[dt.now().date(), dt.now().date()]
-    )
-]
-
-#API Endpoints for testing purposes, demonstrating how to create new entities and retrieve their details.
-@app.route('/test', methods=['GET'])
-def test():
-    test_controller = TestController()
-    result = test_controller.run_tests()
-    return jsonify(result)
 
 @app.route('/book', methods=['POST'])
 def create_book():
@@ -163,4 +140,4 @@ def create_forum():
         forumTimestamp=dt.now().date()
     )
     forum.append(new_forum)
-    return jsonify(new_forum.getForumDetails()), 201
+    return jsonify(new_forum.getForumDetails()),201
