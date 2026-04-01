@@ -90,7 +90,7 @@ function RatingWidget() {
 
       {/* FIRST ROW*/}
       <div className="flex text-sm justify-between
-               border-1 border-black rounded-t-md px-6 py-4 bg-bgsecondary">
+               border-1 border-stone-300 rounded-t-md px-6 py-4 bg-bgsecondary">
 
         <div className="flex flex-1 flex-col items-center">
           <IoBook size={iconSize} className="text-stone-600 hover:text-orange-300"/>
@@ -109,7 +109,7 @@ function RatingWidget() {
       </div>
 
       {/*SECOND ROW*/}
-      <div className="flex flex-col border-1 border-black rounded-b-md
+      <div className="flex flex-col border-1 border-stone-300 rounded-b-md
                       px-6  py-3 bg-bgsecondary">
         <div className="self-center text-sm font-semibold">
           Rate
