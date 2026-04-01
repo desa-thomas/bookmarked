@@ -1,5 +1,4 @@
 from datetime import datetime as dt
-from controllers.TestController import TestController
 from flask import Flask, request, jsonify
 from entities.Accounts import Account, ProgressTracker
 from entities.Books import Book, Bookshelf, ReadingList
@@ -98,22 +97,23 @@ forum = [
     )
 ]
 
-
-
-@app.route('/book', methods=['POST'])
-def create_book():
-    get_data = request.json()
-    new_book = Book(
-        title=get_data.get('title'),
-        id=get_data.get('id'),
-        author=get_data.get('author'),
-        publicationDate=get_data.get('publicationDate'),
-        genres=get_data.get('genres'),
-        ISBN=get_data.get('ISBN'),
-        coverImage=get_data.get('coverImage')
+reviews = [
+    Review(
+        ratingId=1,
+        accountId=accounts[0].id,
+        ratingAmount=5,
+        reviewText="An amazing read! Highly recommended.",
+        reviewTimestamp=dt.now().date()
     )
-    books.append(new_book)
-    return jsonify(new_book.getBookDetails()),201
+]
+
+f_list = [
+    FollowingList(
+        followerId=[accounts[0].id],
+        followedId=[accounts[1].id],
+        dateFollowed=[dt.now().date()]
+    )
+]
 
 @app.route('/account', methods=['POST'])
 def create_account():
@@ -129,6 +129,21 @@ def create_account():
     )
     accounts.append(new_account)
     return jsonify(new_account.getAccountInfo()),201
+
+@app.route('/book', methods=['POST'])
+def create_book():
+    get_data = request.json()
+    new_book = Book(
+        title=get_data.get('title'),
+        id=get_data.get('id'),
+        author=get_data.get('author'),
+        publicationDate=get_data.get('publicationDate'),
+        genres=get_data.get('genres'),
+        ISBN=get_data.get('ISBN'),
+        coverImage=get_data.get('coverImage')
+    )
+    books.append(new_book)
+    return jsonify(new_book.getBookDetails()),201
 
 @app.route('/forum', methods=['POST'])
 def create_forum():
