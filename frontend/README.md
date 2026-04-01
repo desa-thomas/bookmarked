@@ -10,11 +10,25 @@
 # Todo
 Add pages for each boundary class extracted from the [analysis document](https://docs.google.com/document/d/142nzC9YF9G2kjyOhJ2z9PXtlsjHaZIlJIsM1bei7F_Q/edit?tab=t.0), and control classes/methods that should be included on the frontend
 
-- [ ] HomePage
-    - [ ] NavBar
+- [X] HomePage
+    - [X] NavBar
+    - [ ] logged in home page
 
 - [ ] LoginPage
-    - [ ] RegistrationForm (component within the page)
+- [X] RegistrationForm (component within the page)
+    - [ ] Input handling
+
+- [X] BookSearchPage (ResultsDisplay)
+    - [X] BookCoverCard 
+
+- [X] BookPage
+    - [ ] BookmarkButton
+    - [ ] RatingWidget
+    - [ ] ReviewForm
+    - [ ] ReviewPage (Preview of reviews)
+
+- [ ] BookmarkedPage (ReadingListView)
+    - [ ] BookShelfManager (? does this differ from bookmark controller)
 
 - [ ] UserProfilePage 
     - [ ] AccountController
@@ -40,24 +54,12 @@ Add pages for each boundary class extracted from the [analysis document](https:/
     - [ ] ForumController
     - [ ] DiscussionManager (?)
 
-- [ ] BookDetailPage
-    - [ ] BookmarkButton
-    - [ ] BookmarkController
-    - [ ] RatingWidget
-        - [ ] RatingController
 
 - [ ] BookBrowserPage
     - [ ] FilterPanel
     - [ ] ResultsDisplay
     - [ ] BookSearchController
 
-- [ ] ReadingListView
-    - [ ] BookShelfManager (? does this differ from bookmark controller)
-
-- [ ] ReviewPage
-    - [ ] ReviewForm
-    - [ ] ReviewEditor
-    - [ ] ReviewController
     - [ ] CommentSection
         - [ ] Confirmation dialog
         - [ ] CommentModerationPanel (admin only)
