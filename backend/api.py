@@ -46,12 +46,6 @@ forum = [
     )
 ]
 
-@app.route('/test', methods=['GET'])
-def test():
-    test_controller = TestController()
-    result = test_controller.run_tests()
-    return jsonify(result)
-
 @app.route('/book', methods=['POST'])
 def create_book():
     get_data = request.json()
