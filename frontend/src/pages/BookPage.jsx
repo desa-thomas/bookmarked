@@ -39,6 +39,7 @@ export default function BookPage({ }) {
           <p className="text-black font-medium tracking-tight">
             {book.synopsis}
           </p>
+
           <RatingWidget />
         </div>
       </div>
@@ -48,28 +49,76 @@ export default function BookPage({ }) {
 
 
 //WIDGET ICONS
-import { IoBookOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
-import { CiBookmark } from "react-icons/ci";
+
+import { IconContext } from "react-icons";
+
+import { IoBook } from "react-icons/io5";
+import { IoHeart } from "react-icons/io5";
+import { IoBookmark } from "react-icons/io5";
+
+import { IoStar } from "react-icons/io5";
+import { IoStarHalfOutline } from "react-icons/io5";
+
+import { useState } from "react";
+
 function RatingWidget() {
+
+  const [hovered, setHovered] = useState(false);
+  const [starHoveredId, setStarHoveredId] = useState(0);
   const iconSize = 40
+
+  const stars = []
+  for (let i = 1; i <= 5; i++) {
+    stars.push(
+
+        <IoStar id={i} size={iconSize} 
+        className={`${starHoveredId >= i && hovered ? "text-yellow-500" : "text-stone-600"}`}
+
+          onMouseEnter={() => {
+            setHovered(true)
+            setStarHoveredId(i)
+          }}
+          onMouseLeave={() => {
+            setHovered(false)
+          }} />)
+  }
   return (
     <div
       className="
-    border-1 border-black rounded-md min-w-50 h-fit overflow-hide p-4
-    flex flex-col">
+    min-w-60 h-fit overflow-hide 
+    flex flex-col gap-1">
 
       {/* FIRST ROW*/}
-      <div className="flex gap-2 justify-between">
-        <IoBookOutline size={iconSize}/>
-        <CiHeart size={iconSize} />
-        <CiBookmark size={iconSize}/>
+      <div className="flex text-sm justify-between
+               border-1 border-black rounded-t-md px-6 py-4 bg-bgsecondary">
+
+        <div className="flex flex-1 flex-col items-center">
+          <IoBook size={iconSize} className="text-stone-600 hover:text-orange-300"/>
+          Read
+        </div>
+
+        <div className="
+          flex flex-1 flex-col items-center">
+          <IoHeart size={iconSize} className="text-stone-600 hover:text-red-300"/>
+          Like
+        </div>
+        <div className="flex flex-1 flex-col items-center">
+          <IoBookmark size={iconSize} className="text-stone-600 hover:text-green-500"/>
+          Bookmark
+        </div>
       </div>
 
       {/*SECOND ROW*/}
-      <div>
-        RATE (STARS)
+      <div className="flex flex-col border-1 border-black rounded-b-md
+                      px-6  py-3 bg-bgsecondary">
+        <div className="self-center text-sm font-semibold">
+          Rate
+        </div>
+        <div className="flex items-center justify-between">
+          {stars}
+        </div>
       </div>
     </div>
   )
 }
+
