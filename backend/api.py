@@ -15,17 +15,6 @@ def add_cors_headers(response):
 
 #Example data for testing purposes, made one for every entity class. 
 #In a real application, this would be replaced with database calls to fetch and store data.
-progress = [
-    ProgressTracker(
-        trackerId=1,
-        accountId=1,
-        goalId=1,
-        currentValue=150,
-        targetValue=300,
-        lastUpdated=dt.now().date()
-    )
-]
-
 accounts = [
     Account(
         username="john_doe",
@@ -54,13 +43,23 @@ accounts = [
         bio="Loves mystery novels.",
         creationDate=dt.fromisoformat("2020-03-10").date()
     )
+]
 
+progress = [
+    ProgressTracker(
+        trackerId=1,
+        accountId=accounts[0].id,
+        goalId=1,
+        currentValue=150,
+        targetValue=300,
+        lastUpdated=dt.now().date()
+    )
 ]
 
 books = [
     Book(
         title="Example Book",
-        id=1,
+        id=190873,
         author="Jane Doe",
         publicationDate=dt.fromisoformat("1999-06-09").date(),
         genres=["fiction", "adventure"],
@@ -117,7 +116,7 @@ f_list = [
 
 @app.route('/account', methods=['POST'])
 def create_account():
-    get_data = request.json()
+    get_data = request.json
     new_account = Account(
         username=get_data.get('username'),
         id=get_data.get('id'),
@@ -130,9 +129,23 @@ def create_account():
     accounts.append(new_account)
     return jsonify(new_account.getAccountInfo()),201
 
+@app.route('/progress', methods=['POST'])
+def create_progress():
+    get_data = request.json
+    new_progress = ProgressTracker(
+        trackerId=get_data.get('trackerId'),
+        accountId=get_data.get('accountId'),
+        goalId=get_data.get('goalId'),
+        currentValue=get_data.get('currentValue'),
+        targetValue=get_data.get('targetValue'),
+        lastUpdated=dt.now().date()
+    )
+    progress.append(new_progress)
+    return jsonify(new_progress.getProgressDetails()),201
+
 @app.route('/book', methods=['POST'])
 def create_book():
-    get_data = request.json()
+    get_data = request.json
     new_book = Book(
         title=get_data.get('title'),
         id=get_data.get('id'),
@@ -145,9 +158,35 @@ def create_book():
     books.append(new_book)
     return jsonify(new_book.getBookDetails()),201
 
+@app.route('/bookshelf', methods=['POST'])
+def create_bookshelf():
+    get_data = request.json
+    new_shelf = Bookshelf(
+        bookmarkedBooks=get_data.get('bookmarkedBooks'),
+        accountId=get_data.get('accountId'),
+        readingStatuses=get_data.get('readingStatuses'),
+        readingGoal=get_data.get('readingGoal')
+    )
+    shelves.append(new_shelf)
+    return jsonify(new_shelf.getBookshelfDetails()),201
+
+@app.route('/readinglist', methods=['POST'])
+def create_reading_list():
+    get_data = request.json
+    new_list = ReadingList(
+        listName=get_data.get('listName'),
+        listId=get_data.get('listId'),
+        accountId=get_data.get('accountId'),
+        books=get_data.get('books'),
+        readingListTimestamp=dt.now().date(),
+        listVisibility=get_data.get('listVisibility')
+    )
+    r_list.append(new_list)
+    return jsonify(new_list.getListDetails()),201
+
 @app.route('/forum', methods=['POST'])
 def create_forum():
-    get_data = request.json()
+    get_data = request.json
     new_forum = Forum(
         forumId=get_data.get('forumId'),
         forumTitle=get_data.get('forumTitle'),
@@ -156,3 +195,31 @@ def create_forum():
     )
     forum.append(new_forum)
     return jsonify(new_forum.getForumDetails()),201
+
+@app.route('/review', methods=['POST'])
+def create_review():
+    get_data = request.json
+    new_review = Review(
+        ratingId=get_data.get('ratingId'),
+        accountId=get_data.get('accountId'),
+        ratingAmount=get_data.get('ratingAmount'),
+        reviewText=get_data.get('reviewText'),
+        reviewTimestamp=dt.now().date()
+    )
+    reviews.append(new_review)
+    return jsonify(new_review.getReviewDetails()),201
+
+@app.route('/following', methods=['POST'])
+def create_following():
+    get_data = request.json
+    new_following = FollowingList(
+        followerId=get_data.get('followerId'),
+        followedId=get_data.get('followedId'),
+        dateFollowed=get_data.get('dateFollowed')
+    )
+    f_list.append(new_following)
+    return jsonify({
+        "followerId":new_following.getFollowerId(),
+        "followedId":new_following.getFollowedId(),
+        "dateFollowed":new_following.getDateFollowed()
+    }),201
