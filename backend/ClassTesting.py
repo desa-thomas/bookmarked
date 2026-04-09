@@ -1,7 +1,6 @@
 # Coded By: Mateo Adebowale
 # Last Edit: 2026/03/30
 from datetime import datetime as dt
-from controllers.TestController import TestController
 from entities.Accounts import Account
 from entities.Accounts import ProgressTracker
 from entities.Books import Book
@@ -11,13 +10,8 @@ from entities.Social import Forum
 from entities.Social import Review
 from entities.Social import FollowingList
 
-
-# Controllers
-tc = TestController()
-tc.testFunc()
-
 # Entities
-showTest = True
+showTest = False
 
 if showTest:
     acc = 46327007
